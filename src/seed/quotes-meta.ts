@@ -28,7 +28,7 @@ export const QUOTES_META: Record<number, QuoteMeta> = {
   10: { author: 'thenx', sourceType: 'post' },
   11: { author: 'bonjoe-tom', sourceType: 'conversation' },
   12: { author: 'bonjoe-tom', sourceType: 'conversation' },
-  13: { author: 'hrx' },
+  13: { author: 'hrithik-roshan' },
   14: { author: 'alma-anvar', sourceType: 'conversation' },
   15: { author: 'jerryrigeverything', sourceTitle: 'YouTube sign-off', sourceType: 'video' },
   16: { author: 'mark-manson', sourceType: 'writing' },

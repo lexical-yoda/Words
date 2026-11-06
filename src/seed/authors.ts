@@ -19,7 +19,7 @@ export const AUTHORS: SeedAuthor[] = [
   { slug: 'brahmadatha', name: 'Brahmadatha', kind: 'friend' },
   { slug: 'thenx', name: 'Thenx (Chris Heria)', kind: 'creator', links: ig('officialthenx') },
   { slug: 'bonjoe-tom', name: 'Bonjoe Tom', kind: 'friend' },
-  { slug: 'hrx', name: 'HRX', kind: 'friend' },
+  { slug: 'hrithik-roshan', name: 'Hrithik Roshan', kind: 'public', links: wiki('Hrithik_Roshan') },
   { slug: 'alma-anvar', name: 'Alma Anvar', kind: 'friend' },
   { slug: 'jerryrigeverything', name: 'JerryRigEverything (Zack Nelson)', kind: 'creator', links: yt('JerryRigEverything') },
   { slug: 'mark-manson', name: 'Mark Manson', kind: 'public', links: [{ label: 'Website', url: 'https://markmanson.net' }] },
