@@ -1,0 +1,13 @@
+node_modules
+.next
+.git
+data
+.env
+.env.*
+!.env.example
+docs
+deploy
+tests
+*.md
+private
+examples

@@ -1,0 +1,21 @@
+# Minimal example. Put PAYLOAD_SECRET (openssl rand -hex 32) in a .env file
+# next to this one, and make ./data writable by uid 10001.
+services:
+  words:
+    image: ghcr.io/lexical-yoda/words:latest
+    ports:
+      - "127.0.0.1:8480:8480"
+    volumes:
+      - ./data:/app/data
+    env_file: .env
+    environment:
+      - SITE_URL=https://example.com
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /app/.next/cache:uid=10001,gid=10001
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped

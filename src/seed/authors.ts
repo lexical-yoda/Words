@@ -1,0 +1,66 @@
+// Authors for the first seed. Kinds and links come from the 2026-11-06 pass
+// over the quote note (docs/quotes-plan.md); everything is editable in /admin.
+
+type Kind = 'public' | 'creator' | 'character' | 'friend' | 'self' | 'unknown'
+export type SeedAuthor = { slug: string; name: string; kind: Kind; note?: string; links?: { label: string; url: string }[] }
+
+const wiki = (page: string) => [{ label: 'Wikipedia', url: `https://en.wikipedia.org/wiki/${page}` }]
+const yt = (handle: string) => [{ label: 'YouTube', url: `https://www.youtube.com/@${handle}` }]
+const ig = (handle: string) => [{ label: 'Instagram', url: `https://www.instagram.com/${handle}/` }]
+
+export const AUTHORS: SeedAuthor[] = [
+  { slug: 'lexi', name: 'Lexi', kind: 'self', links: [{ label: 'Substack', url: 'https://substack.com/@lexicalyoda' }, { label: 'l3xj.com', url: 'https://www.l3xj.com' }] },
+  { slug: 'exurb1a', name: 'Exurb1a', kind: 'creator', links: yt('exurb1a') },
+  { slug: 'peter-mckinnon', name: 'Peter McKinnon', kind: 'creator', links: yt('PeterMcKinnon') },
+  { slug: 'seneca', name: 'Seneca', kind: 'public', links: wiki('Seneca_the_Younger') },
+  { slug: 'heraclitus', name: 'Heraclitus', kind: 'public', links: wiki('Heraclitus') },
+  { slug: '10-years', name: '10 Years', kind: 'public', links: wiki('10_Years_(band)') },
+  { slug: 'govind-p', name: 'Govind P', kind: 'friend', links: [{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/devilasenare/' }] },
+  { slug: 'brahmadatha', name: 'Brahmadatha', kind: 'friend' },
+  { slug: 'thenx', name: 'Thenx (Chris Heria)', kind: 'creator', links: ig('officialthenx') },
+  { slug: 'bonjoe-tom', name: 'Bonjoe Tom', kind: 'friend' },
+  { slug: 'hrx', name: 'HRX', kind: 'friend' },
+  { slug: 'alma-anvar', name: 'Alma Anvar', kind: 'friend' },
+  { slug: 'jerryrigeverything', name: 'JerryRigEverything (Zack Nelson)', kind: 'creator', links: yt('JerryRigEverything') },
+  { slug: 'mark-manson', name: 'Mark Manson', kind: 'public', links: [{ label: 'Website', url: 'https://markmanson.net' }] },
+  { slug: 'stanley-kubrick', name: 'Stanley Kubrick', kind: 'public', links: wiki('Stanley_Kubrick') },
+  { slug: 'andy-bernard', name: 'Andy Bernard', kind: 'character', note: 'From The Office (US).', links: wiki('Andy_Bernard') },
+  { slug: 'alejandro-jodorowsky', name: 'Alejandro Jodorowsky', kind: 'public', links: wiki('Alejandro_Jodorowsky') },
+  { slug: 'veritasium', name: 'Veritasium (Derek Muller)', kind: 'creator', links: yt('veritasium') },
+  { slug: 'foals', name: 'Foals', kind: 'public', links: wiki('Foals') },
+  { slug: 'henri-cartier-bresson', name: 'Henri Cartier-Bresson', kind: 'public', links: wiki('Henri_Cartier-Bresson') },
+  { slug: 'carl-jung', name: 'Carl Jung', kind: 'public', links: wiki('Carl_Jung') },
+  { slug: 'roo-panes', name: 'Roo Panes', kind: 'public' },
+  { slug: 'kurzgesagt', name: 'Kurzgesagt', kind: 'creator', links: yt('kurzgesagt') },
+  { slug: 'gabe-newell', name: 'Gabe Newell', kind: 'public', links: wiki('Gabe_Newell') },
+  { slug: 'the-weeknd', name: 'The Weeknd', kind: 'public', links: wiki('The_Weeknd') },
+  { slug: 'socrates', name: 'Socrates', kind: 'public', links: wiki('Socrates') },
+  { slug: 'charles-bukowski', name: 'Charles Bukowski', kind: 'public', links: wiki('Charles_Bukowski') },
+  { slug: 'shawn-james', name: 'Shawn James', kind: 'public' },
+  { slug: 'phil-lober', name: 'Phil Lober', kind: 'public' },
+  { slug: 'sylvia-plath', name: 'Sylvia Plath', kind: 'public', links: wiki('Sylvia_Plath') },
+  { slug: 'eren-jaeger', name: 'Eren Jaeger', kind: 'character', note: 'From Attack on Titan, by Hajime Isayama.', links: wiki('Eren_Yeager') },
+  { slug: 'endeavor', name: 'Endeavor', kind: 'character', note: 'From My Hero Academia, by Kōhei Horikoshi.' },
+  { slug: 'kneesovertoesguy', name: 'Ben Patrick (Kneesovertoesguy)', kind: 'creator', links: ig('kneesovertoesguy') },
+  { slug: 'atmosphere', name: 'Atmosphere', kind: 'public', links: wiki('Atmosphere_(music_group)') },
+  { slug: '070-shake', name: '070 Shake', kind: 'public', links: wiki('070_Shake') },
+  { slug: 'alex-gourmet-salt', name: 'Alex (Gourmet salt)', kind: 'unknown' },
+  { slug: 'marianne-williamson', name: 'Marianne Williamson', kind: 'public', links: wiki('Marianne_Williamson') },
+  { slug: 'karthik-netha', name: 'Karthik Netha', kind: 'public', note: 'Lyricist of Life of Ram, from the film 96.' },
+  { slug: 'salt-and-whistles', name: 'Salt and Whistles', kind: 'creator' },
+  { slug: 'pursuit-of-wonder', name: 'Pursuit of Wonder', kind: 'creator', links: yt('PursuitofWonder') },
+  { slug: 'rafael-rolli', name: 'Rafael Rolli', kind: 'creator' },
+  { slug: 'harry-hudson', name: 'Harry Hudson', kind: 'public' },
+  { slug: 'c-s-lewis', name: 'C. S. Lewis', kind: 'public', links: wiki('C._S._Lewis') },
+  { slug: 'american-baron', name: 'American Baron (Baron Ryan)', kind: 'creator', links: ig('americanbaron') },
+  { slug: 'mayuri-kurotsuchi', name: 'Mayuri Kurotsuchi', kind: 'character', note: 'From Bleach, by Tite Kubo.' },
+  { slug: 'brian-hodge', name: 'Brian Hodge', kind: 'public' },
+  { slug: 'richard-siken', name: 'Richard Siken', kind: 'public', links: wiki('Richard_Siken') },
+  { slug: 'friedrich-nietzsche', name: 'Friedrich Nietzsche', kind: 'public', links: wiki('Friedrich_Nietzsche') },
+  { slug: 'ram-dass', name: 'Ram Dass', kind: 'public', links: wiki('Ram_Dass') },
+  { slug: 'mike-pridgen', name: 'Mike Pridgen', kind: 'creator' },
+  { slug: 'stephen-fry', name: 'Stephen Fry', kind: 'public', links: wiki('Stephen_Fry') },
+  { slug: 'starpark-designs', name: 'Starpark Designs', kind: 'creator' },
+  { slug: 'marisa-g-franco', name: 'Marisa G. Franco', kind: 'public' },
+  { slug: 'george-bernard-shaw', name: 'George Bernard Shaw', kind: 'public', links: wiki('George_Bernard_Shaw') },
+]
