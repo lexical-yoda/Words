@@ -44,7 +44,7 @@ export const AUTHORS: SeedAuthor[] = [
   { slug: 'kneesovertoesguy', name: 'Ben Patrick (Kneesovertoesguy)', kind: 'creator', links: ig('kneesovertoesguy') },
   { slug: 'atmosphere', name: 'Atmosphere', kind: 'public', links: wiki('Atmosphere_(music_group)') },
   { slug: '070-shake', name: '070 Shake', kind: 'public', links: wiki('070_Shake') },
-  { slug: 'alex-gourmet-salt', name: 'Alex (Gourmet salt)', kind: 'unknown' },
+  { slug: 'alex-french-guy-cooking', name: 'Alex (French Guy Cooking)', kind: 'creator', links: yt('frenchguycooking') },
   { slug: 'marianne-williamson', name: 'Marianne Williamson', kind: 'public', links: wiki('Marianne_Williamson') },
   { slug: 'karthik-netha', name: 'Karthik Netha', kind: 'public', note: 'Lyricist of Life of Ram, from the film 96.' },
   { slug: 'salt-and-whistles', name: 'Salt and Whistles', kind: 'creator' },

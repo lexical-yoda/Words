@@ -37,6 +37,13 @@ export async function randomQuote(): Promise<Quote | null> {
   return all.length ? all[Math.floor(Math.random() * all.length)] : null
 }
 
+export async function heroImageUrl(): Promise<string | null> {
+  const p = await payload()
+  const s = await p.findGlobal({ slug: 'site-settings', depth: 1, ...anon })
+  const m = asMedia(s.heroImage)
+  return m?.url || null
+}
+
 export async function listWritings(limit = 100) {
   const p = await payload()
   const res = await p.find({ collection: 'writings', sort: '-writtenOn', limit, depth: 1, ...anon })

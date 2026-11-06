@@ -57,7 +57,7 @@ export const QUOTES_META: Record<number, QuoteMeta> = {
   39: { author: 'kneesovertoesguy', sourceType: 'post' },
   40: { author: 'atmosphere', sourceTitle: 'Virgo', sourceType: 'song', lyric: true },
   41: { author: '070-shake', sourceTitle: 'Flight 319', sourceType: 'song', lyric: true },
-  42: { author: 'alex-gourmet-salt' },
+  42: { author: 'alex-french-guy-cooking', sourceTitle: 'Gourmet salt video', sourceType: 'video' },
   43: { author: 'marianne-williamson', sourceTitle: 'A Return to Love', sourceType: 'book' },
   44: { author: 'karthik-netha', sourceTitle: 'Life of Ram, from the film 96', sourceType: 'song', lyric: true },
   45: { author: 'salt-and-whistles', sourceType: 'post' },

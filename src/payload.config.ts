@@ -11,6 +11,7 @@ import { Quotes } from './collections/Quotes'
 import { Users } from './collections/Users'
 import { Writings } from './collections/Writings'
 import { Counters } from './globals/Counters'
+import { SiteSettings } from './globals/SiteSettings'
 import { FillAuthorPhotosTask } from './jobs/fillAuthorPhotos'
 import { ImportSubstackTask } from './jobs/importSubstack'
 import { migrations } from './migrations'
@@ -27,7 +28,7 @@ export default buildConfig({
     meta: { titleSuffix: ' · words' },
   },
   collections: [Writings, Quotes, Authors, Media, Users],
-  globals: [Counters],
+  globals: [SiteSettings, Counters],
   editor: lexicalEditor({
     features: ({ defaultFeatures }) => [...defaultFeatures, FixedToolbarFeature(), HorizontalRuleFeature()],
   }),

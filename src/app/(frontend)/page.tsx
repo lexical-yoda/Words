@@ -2,14 +2,15 @@ import Link from 'next/link'
 import React from 'react'
 
 import { plainText } from '@/components/Body'
+import { PixelImage } from '@/components/PixelImage'
 import { PlexusHands } from '@/components/PlexusHands'
 import { Credit, toneOf } from '@/components/QuoteCard'
 import { Win } from '@/components/Win'
-import { fmtDate, listQuotes, listWritings, num } from '@/lib/data'
+import { fmtDate, heroImageUrl, listQuotes, listWritings, num } from '@/lib/data'
 import { WRITING_TONE } from '@/lib/tones'
 
 export default async function Home() {
-  const [writings, quotes] = await Promise.all([listWritings(6), listQuotes()])
+  const [writings, quotes, hero] = await Promise.all([listWritings(6), listQuotes(), heroImageUrl()])
   const q = quotes.length ? quotes[Math.floor(Math.random() * quotes.length)] : null
 
   return (
@@ -35,7 +36,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="hero-art screen" aria-hidden="true">
-            <PlexusHands />
+            {hero ? <PixelImage src={hero} /> : <PlexusHands />}
             <span className="anno a-tl">fig.01 · reaching</span>
             <span className="anno a-br">{quotes.length} words kept</span>
           </div>
