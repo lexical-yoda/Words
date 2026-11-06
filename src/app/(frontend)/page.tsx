@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import { plainText } from '@/components/Body'
+import { PlexusHands } from '@/components/PlexusHands'
 import { Credit, toneOf } from '@/components/QuoteCard'
 import { Win } from '@/components/Win'
 import { fmtDate, listQuotes, listWritings, num } from '@/lib/data'
@@ -34,9 +35,9 @@ export default async function Home() {
             </div>
           </div>
           <div className="hero-art screen" aria-hidden="true">
-            <div className="orb" />
-            <span className="anno a-tl">fig.01 · {quotes.length} words kept</span>
-            <span className="anno a-br">{new Date().getFullYear()}</span>
+            <PlexusHands />
+            <span className="anno a-tl">fig.01 · reaching</span>
+            <span className="anno a-br">{quotes.length} words kept</span>
           </div>
         </Win>
       </section>

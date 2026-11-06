@@ -45,7 +45,16 @@ export const Authors: CollectionConfig = {
       options: [...AUTHOR_KINDS],
       admin: { position: 'sidebar' },
     },
-    { name: 'photo', type: 'upload', relationTo: 'media' },
+    {
+      name: 'photo',
+      type: 'upload',
+      relationTo: 'media',
+      admin: {
+        description:
+          'Upload one, or leave empty: public figures get their free Wikipedia photo, with its credit, within the hour.',
+      },
+    },
+    { name: 'photoLookedUpAt', type: 'date', admin: { hidden: true } },
     {
       name: 'note',
       type: 'textarea',

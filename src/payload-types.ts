@@ -115,6 +115,7 @@ export interface Config {
   jobs: {
     tasks: {
       importSubstack: TaskImportSubstack;
+      fillAuthorPhotos: TaskFillAuthorPhotos;
       inline: {
         input: unknown;
         output: unknown;
@@ -300,7 +301,11 @@ export interface Author {
    */
   slug?: string | null;
   kind: 'public' | 'creator' | 'character' | 'friend' | 'self' | 'unknown';
+  /**
+   * Upload one, or leave empty: public figures get their free Wikipedia photo, with its credit, within the hour.
+   */
   photo?: (number | null) | Media;
+  photoLookedUpAt?: string | null;
   /**
    * A line or two about who they are.
    */
@@ -415,7 +420,7 @@ export interface PayloadJob {
     | {
         executedAt: string;
         completedAt: string;
-        taskSlug: 'inline' | 'importSubstack';
+        taskSlug: 'inline' | 'importSubstack' | 'fillAuthorPhotos';
         taskID: string;
         input?:
           | {
@@ -448,7 +453,7 @@ export interface PayloadJob {
         id?: string | null;
       }[]
     | null;
-  taskSlug?: ('inline' | 'importSubstack') | null;
+  taskSlug?: ('inline' | 'importSubstack' | 'fillAuthorPhotos') | null;
   queue?: string | null;
   waitUntil?: string | null;
   processing?: boolean | null;
@@ -579,6 +584,7 @@ export interface AuthorsSelect<T extends boolean = true> {
   slug?: T;
   kind?: T;
   photo?: T;
+  photoLookedUpAt?: T;
   note?: T;
   links?:
     | T
@@ -806,6 +812,17 @@ export interface TaskImportSubstack {
   output: {
     created?: number | null;
     seen?: number | null;
+  };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "TaskFillAuthorPhotos".
+ */
+export interface TaskFillAuthorPhotos {
+  input?: unknown;
+  output: {
+    filled?: number | null;
+    checked?: number | null;
   };
 }
 /**

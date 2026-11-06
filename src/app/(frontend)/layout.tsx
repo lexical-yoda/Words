@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google'
+import { Geist, Geist_Mono, Source_Serif_4 } from 'next/font/google'
 import React from 'react'
 
 import { Nav } from '@/components/Nav'
@@ -7,7 +7,9 @@ import './styles.css'
 
 const sans = Geist({ subsets: ['latin'], weight: ['300', '400', '500', '600'], variable: '--f-sans' })
 const mono = Geist_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--f-mono' })
-const serif = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['normal', 'italic'], variable: '--f-serif' })
+// Quotes are set in Source Serif 4: a text serif built for screens, much
+// easier to read at length than the display serif used at first.
+const serif = Source_Serif_4({ subsets: ['latin'], weight: ['400', '500'], style: ['normal', 'italic'], variable: '--f-serif' })
 
 export const metadata = {
   metadataBase: new URL(process.env.SITE_URL || 'https://words.l3xj.com'),

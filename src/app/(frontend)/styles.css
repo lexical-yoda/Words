@@ -214,17 +214,7 @@ ul, ol { padding: 0; list-style: none; }
 .w-hero { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); }
 .hero-body { padding: clamp(24px, 4vw, 56px); display: grid; gap: 22px; align-content: center; }
 .hero-art { position: relative; min-height: 360px; border-left: 1px solid var(--line-strong); overflow: hidden; }
-/* A stippled iridescent orb: a conic gradient seen through a dot mask. */
-.orb {
-  position: absolute; inset: 12%;
-  border-radius: 50%;
-  background: conic-gradient(from 200deg, #5aa8ff, #b27dff, #ff7fae, #ff9e6d, #5ee0bc, #5aa8ff);
-  -webkit-mask: radial-gradient(circle, #000 1.1px, transparent 1.6px) 0 0 / 7px 7px, radial-gradient(closest-side, #000 62%, transparent 100%);
-          mask: radial-gradient(circle, #000 1.1px, transparent 1.6px) 0 0 / 7px 7px, radial-gradient(closest-side, #000 62%, transparent 100%);
-  -webkit-mask-composite: source-in; mask-composite: intersect;
-  animation: spin 40s linear infinite;
-}
-@keyframes spin { to { transform: rotate(1turn); } }
+.plexus { position: absolute; inset: 0; width: 100%; height: 100%; }
 .anno { position: absolute; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--ink-3); }
 .a-tl { top: 12px; left: 14px; }
 .a-br { right: 14px; bottom: 12px; }
@@ -297,7 +287,7 @@ ul, ol { padding: 0; list-style: none; }
 .qcard[hidden] { display: none; }
 .qcard-body { position: relative; display: block; padding: 22px 22px 14px; background: linear-gradient(170deg, var(--t-soft), transparent 75%); }
 .qmark { position: absolute; top: 2px; right: 14px; font-family: var(--font-serif); font-size: 72px; line-height: 1; color: var(--t); opacity: 0.35; pointer-events: none; }
-.qtext { font-family: var(--font-serif); font-size: 21px; line-height: 1.38; white-space: pre-line; letter-spacing: -0.005em; }
+.qtext { font-family: var(--font-serif); font-size: 19px; line-height: 1.55; white-space: pre-line; }
 .qcard-body:hover .qtext { color: var(--t); }
 .qcard-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 16px 14px; border-top: 1px dashed var(--line-strong); }
 .why-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--spark); flex-shrink: 0; }
@@ -310,8 +300,8 @@ a.credit-name:hover { color: var(--t, var(--accent)); }
 .avatar { border-radius: 50%; object-fit: cover; border: 1px solid var(--line-strong); flex-shrink: 0; }
 .avatar-ph { display: grid; place-items: center; background: var(--t-soft); color: var(--t); font-family: var(--font-mono); font-size: 12px; font-weight: 500; text-transform: uppercase; }
 
-.qtext-xl { font-size: clamp(26px, 3vw, 40px); line-height: 1.3; }
-.qtext-xxl { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.25; }
+.qtext-xl { font-size: clamp(22px, 2.4vw, 32px); line-height: 1.45; }
+.qtext-xxl { font-size: clamp(23px, 2.8vw, 36px); line-height: 1.45; }
 .w-quote { max-width: 880px; margin: 0 auto; }
 .qpage { position: relative; padding: clamp(28px, 6vw, 72px); display: grid; gap: 32px; background: linear-gradient(165deg, var(--t-soft), transparent 70%); }
 .qmark-xl { font-size: 160px; top: 0; right: 28px; opacity: 0.3; }
@@ -328,6 +318,8 @@ a.qpage-name:hover { color: var(--t); border-color: var(--t); }
 .w-author { margin-bottom: 32px; }
 .author { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: clamp(20px, 4vw, 48px); padding: clamp(22px, 4vw, 44px); align-items: center; background: linear-gradient(165deg, var(--t-soft), transparent 70%); }
 .author-photo { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 1px solid var(--ink); box-shadow: 4px 4px 0 0 var(--t); }
+.author-fig { display: grid; gap: 10px; justify-items: center; }
+.photo-credit { max-width: 200px; text-align: center; font-family: var(--font-mono); font-size: 10.5px; line-height: 1.4; color: var(--ink-3); }
 .author-ph { display: grid; place-items: center; background: var(--t-soft); color: var(--t); font-size: 64px; font-weight: 300; }
 .author-text { display: grid; gap: 14px; }
 
@@ -357,7 +349,7 @@ a.qpage-name:hover { color: var(--t); border-color: var(--t); }
   .author { grid-template-columns: 1fr; }
   .author-photo { width: 120px; height: 120px; }
   .win-status > span:last-child:not(:first-child) { display: none; }
-  .qtext { font-size: 20px; }
+  .qtext { font-size: 18px; }
   .tb-tray { margin-left: 0; }
 }
 @media (max-width: 420px) {

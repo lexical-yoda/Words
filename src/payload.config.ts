@@ -11,6 +11,7 @@ import { Quotes } from './collections/Quotes'
 import { Users } from './collections/Users'
 import { Writings } from './collections/Writings'
 import { Counters } from './globals/Counters'
+import { FillAuthorPhotosTask } from './jobs/fillAuthorPhotos'
 import { ImportSubstackTask } from './jobs/importSubstack'
 import { migrations } from './migrations'
 
@@ -45,7 +46,7 @@ export default buildConfig({
   }),
   graphQL: { disable: true },
   jobs: {
-    tasks: [ImportSubstackTask],
+    tasks: [ImportSubstackTask, FillAuthorPhotosTask],
     // The scheduler only runs in the long-lived server, never during a build.
     autoRun: [{ cron: '0 * * * * *', queue: 'hourly' }],
     shouldAutoRun: () => process.env.DISABLE_JOBS !== 'true',

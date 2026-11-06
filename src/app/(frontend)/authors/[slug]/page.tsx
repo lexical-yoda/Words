@@ -27,7 +27,10 @@ export default async function AuthorPage({ params }: Props) {
       <Win title={`${a.slug}.vcf`} tone={tone} className="w-author" status={<><span>{quotes.length} quotes kept</span><span>{KIND_LABEL[a.kind || 'unknown']}</span></>}>
         <div className="author">
           {photo?.url ? (
-            <img className="author-photo" src={photo.sizes?.card?.url || photo.url} alt={photo.alt || a.name} />
+            <figure className="author-fig">
+              <img className="author-photo" src={photo.sizes?.card?.url || photo.url} alt={photo.alt || a.name} />
+              {photo.caption ? <figcaption className="photo-credit">{photo.caption}</figcaption> : null}
+            </figure>
           ) : (
             <div className={`author-photo author-ph tone-${tone}`} aria-hidden="true">
               {a.name.replace(/\(.*?\)/g, '').trim().slice(0, 1)}
