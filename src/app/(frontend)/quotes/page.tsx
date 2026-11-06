@@ -25,7 +25,7 @@ export default async function Quotes() {
         </h1>
         <p className="lede">
           Some people collect stamps. I collect sentences: from books, videos, friends, anime, and the odd post that
-          showed up at exactly the right time. Each one has a number, and the number never changes.
+          showed up at exactly the right time.
         </p>
       </header>
       <QuoteBrowser counts={counts} total={quotes.length}>
