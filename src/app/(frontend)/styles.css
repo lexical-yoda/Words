@@ -21,7 +21,6 @@
   --dur: 0.35s;
 }
 
-:root,
 [data-theme='light'] {
   color-scheme: light;
   --bg: #eeebe3;
@@ -48,6 +47,7 @@
   --sand: #8a6a1c;   --sand-soft: #f3e8c9;
 }
 
+:root,
 [data-theme='dark'] {
   color-scheme: dark;
   --bg: #060607;

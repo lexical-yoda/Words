@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-// Same behaviour as l3xj.com: light unless the visitor picked dark, choice
+// Same behaviour as l3xj.com: dark unless the visitor picked light, choice
 // kept in localStorage under `l3xj-theme`.
 export function ThemeToggle() {
   const flip = () => {
@@ -25,4 +25,4 @@ export function ThemeToggle() {
   )
 }
 
-export const THEME_INIT = `(function(){var t='light';try{var q=new URLSearchParams(location.search).get('theme');var s=localStorage.getItem('l3xj-theme');t=q==='dark'||q==='light'?q:(s==='dark'||s==='light'?s:'light')}catch(e){}document.documentElement.dataset.theme=t})();`
+export const THEME_INIT = `(function(){var t='dark';try{var q=new URLSearchParams(location.search).get('theme');var s=localStorage.getItem('l3xj-theme');t=q==='dark'||q==='light'?q:(s==='dark'||s==='light'?s:'dark')}catch(e){}document.documentElement.dataset.theme=t})();`
