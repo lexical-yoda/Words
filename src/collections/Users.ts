@@ -17,6 +17,7 @@ export const Users: CollectionConfig = {
     delete: loggedIn,
   },
   auth: {
+    useAPIKey: true,
     maxLoginAttempts: 5,
     lockTime: 15 * 60 * 1000,
     tokenExpiration: 7 * 24 * 60 * 60,
