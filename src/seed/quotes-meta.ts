@@ -69,7 +69,7 @@ export const QUOTES_META: Record<number, QuoteMeta> = {
   51: { sourceTitle: 'Overlord, season 2 episode 2', sourceType: 'anime' },
   52: { author: 'american-baron', sourceType: 'post' },
   53: { author: 'mayuri-kurotsuchi', sourceTitle: 'Bleach, by Tite Kubo', sourceType: 'anime' },
-  54: { author: 'brian-hodge', sourceType: 'book' },
+  54: { author: 'max-planck', sourceTitle: "Planck's principle, from his Scientific Autobiography (paraphrased)", sourceType: 'book' },
   55: {},
   56: { author: 'richard-siken', sourceTitle: 'Crush', sourceType: 'poem' },
   57: {},

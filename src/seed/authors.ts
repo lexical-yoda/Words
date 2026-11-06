@@ -55,6 +55,7 @@ export const AUTHORS: SeedAuthor[] = [
   { slug: 'american-baron', name: 'American Baron (Baron Ryan)', kind: 'creator', links: ig('americanbaron') },
   { slug: 'mayuri-kurotsuchi', name: 'Mayuri Kurotsuchi', kind: 'character', note: 'From Bleach, by Tite Kubo.' },
   { slug: 'brian-hodge', name: 'Brian Hodge', kind: 'public' },
+  { slug: 'max-planck', name: 'Max Planck', kind: 'public', links: wiki('Max_Planck') },
   { slug: 'richard-siken', name: 'Richard Siken', kind: 'public', links: wiki('Richard_Siken') },
   { slug: 'friedrich-nietzsche', name: 'Friedrich Nietzsche', kind: 'public', links: wiki('Friedrich_Nietzsche') },
   { slug: 'ram-dass', name: 'Ram Dass', kind: 'public', links: wiki('Ram_Dass') },
